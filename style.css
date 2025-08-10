@@ -1,0 +1,381 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #1F1F1F;
+    color: #fff;
+}
+
+/* --- Encabezado --- */
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('static/header2.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Cambia height por min-height */
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+.header-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header-logo {
+    height: 500px;
+    width: auto;
+    max-height: 40vh; /* Ajusta este valor según necesites */
+    object-fit: contain; /* Asegura que la imagen completa se vea dentro del contenedor sin recortarse */
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.5);
+    color: #00ff41; /* Color verde neón */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.justificado-mejorado {
+    text-align: justify;
+    hyphens: auto; /* Permite guionizar palabras automáticamente */
+    -webkit-hyphens: auto; /* Para navegadores basados en Webkit (Chrome, Safari) */
+    -moz-hyphens: auto; /* Para Firefox */
+    word-break: normal; /* Evita que las palabras se rompan de forma no deseada */
+}
+
+/* Estilo general del contenedor de skills */
+.neon-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Espacio entre el ícono y el nombre */
+  color: #569CD6; /* Color base del texto e íconos */
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.neon-skill i {
+  font-size: 2.5rem;
+}
+
+.neon-skill span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Efecto al pasar el mouse (hover) */
+.neon-skill:hover {
+  transform: scale(1.1); /* Escala al 110% */
+}
+
+/* --- Sección de Servicios --- */
+.services-section h2 {
+    color: #00ff41;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 65, 0.2);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: #00ff41;
+}
+
+.card-title {
+    color: #00ff41;
+}
+
+.card-text {
+    color: #ccc;
+}
+
+.github-button {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  
+  /* --- Corrección del problema --- */
+  cursor: pointer;
+  pointer-events: auto; 
+  /* ------------------------------- */
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.body_section {
+  padding : 3% 5% 1%;
+}
+  
+a {
+  text-decoration: none;
+}
+  
+.headerachor {
+    color: black;
+    margin: 0 7px 0 7px;
+    font-size: 25px;
+  }
+  
+  .headerachor:hover {
+    background-color: #f1f1f1;
+  }
+ 
+
+  #Section1{
+    padding: 7% 0 3%;
+  }
+
+  .Programming{
+    width: 100%;
+    height: 100%;
+  }
+
+  .Coding{
+    padding-top:3%;
+    text-align: center;
+  }
+  
+  .competitive_icon li{
+    margin:0 2% 0;
+    list-style:none;
+    display: inline; 
+  }
+
+  .iconify{
+    color: gray;
+    margin-bottom: 40px;
+  }
+  .iconify:hover{
+    color: black;
+  }
+
+  .Heading{
+    text-align: center;
+  }
+  
+  .timeline{
+    margin-top:20px;
+    position:relative; 
+  }
+  
+  .timeline:before{
+    position:absolute;
+    content:'';
+    width:4px;
+    height:calc(100% - 150px);
+    background: #00ff41;
+    left:14px;
+    top:5px;
+    border-radius:4px;
+  }
+  
+  .timeline-month{
+    color:black;
+    position:relative;
+    padding:4px 15px 4px 35px;
+    background-color:#00ff41;
+    display:inline-block;
+    width:auto;
+    border-radius:40px;
+    border:1px solid #17191B;
+    border-right-color:black;
+    margin-bottom:30px;
+  }
+  
+  .timeline-month span{
+    position:absolute;
+    top:-1px;
+    left:calc(100% - 10px);
+    z-index:-1;
+    white-space:nowrap;
+    display:inline-block;
+    background-color:#1F1F1F;
+    padding:4px 10px 4px 20px;
+    border-top-right-radius:40px;
+    border-bottom-right-radius:40px;
+    border:1px solid black;
+    box-sizing:border-box;
+  }
+  
+  .timeline-month:before{
+    position:absolute;
+    content:'';
+    width:20px;
+    height:20px;
+    background: #000000;
+    border-radius:100%;
+    border:1px solid #17191B;
+    left:5px;
+  }
+  
+  .timeline-section{
+    padding-left:35px;
+    display:block;
+    position:relative;
+    margin-bottom:30px;
+  }
+  
+  .timeline-date{
+    margin-bottom:15px;
+    padding:2px 15px;
+    background:#00ff41;
+    position:relative;
+    display:inline-block;
+    border-radius:20px;
+    border:1px solid #17191B;
+    color:black;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.3);
+  }
+  .timeline-section:before{
+    content:'';
+    position:absolute;
+    width:30px;
+    height:1px;
+    background-color:#00ff41;
+    top:12px;
+    left:20px;
+  }
+  
+  .timeline-section:after{
+    content:'';
+    position:absolute;
+    width:10px;
+    height:10px;
+    background: #00ff41;
+    top:7px;
+    left:11px;
+    border:1px solid #17191B;
+    border-radius:100%;
+  } 
+  
+  .timeline-box{
+    position:relative;
+    color:black;
+    background-color:#569CD6;
+    border-radius:15px;
+    border-top-left-radius:0px;
+    border-bottom-right-radius:0px;
+    border:1px solid #17191B;
+    transition:all 0.3s ease;
+    overflow:hidden;
+  }
+  
+  .box-icon{
+    position:absolute;
+    right:5px;
+    top:0px;
+  }
+  
+  .box-title{
+    padding:10px 15px;
+    font-size: 25px;
+    border-bottom: 5px solid #17191B;
+  }
+
+  .degree{
+      font-size: 15px;
+  }
+ 
+  
+  .box-title i{
+    margin-right:5px;
+  }
+  
+  .box-content{
+    padding:5px 15px;
+    background-color: white;
+  }
+  
+  .box-item{
+    margin-bottom:5px;
+    color:#868e96;
+    font-weight: 400;
+  }
+
+  .certificate{
+    padding-top: 20px;
+  }
+  .card-text{
+    text-align: center;
+  }
+  .certificate-text{
+    text-align: center;
+  }
+
+  
+  .box-shadow { box-shadow:10px 10px 10px black; }
+
+
+
+
+/* --- Botón de WhatsApp flotante --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #111;
+    border-top: 1px solid #333;
+}
+
+.footer-logo {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+}
+
+.social-icon {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00ff41;
+}

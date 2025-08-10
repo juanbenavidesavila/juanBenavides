@@ -1,0 +1,10 @@
+{
+    "name": "juanBenavides",
+    "icons": [
+      {
+        "src": "static/perfil.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
